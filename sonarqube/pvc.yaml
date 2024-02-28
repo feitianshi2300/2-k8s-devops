@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: postgres-data1
+  namespace: kube-devops
+spec:
+  accessModes:
+    - ReadWriteMany
+  storageClassName: "managed-nfs-storage1"
+  resources:
+    requests:
+      storage: 5Gi
